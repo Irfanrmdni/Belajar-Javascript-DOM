@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Bermain dengan warna</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: poppins;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        button {
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: unset;
+            box-shadow: 0 5px 8px rgba(0, 0, 0, .3);
+            background-color: royalblue;
+            color: white;
+        }
+
+        .putih {
+            background-color: royalblue;
+            color: white;
+        }
+
+        .kotak {
+            width: 50px;
+            height: 50px;
+            margin: 10px auto;
+        }
+
+        .merah {
+            background-color: red;
+        }
+
+        .hijau {
+            background-color: green;
+        }
+
+        .biru {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bermain dengan warna</h1>
+    <!--
+        Latihan DOM Bermain dengan warna
+    -->
+    <!--Membuat tombol untuk merubah warna background body-->
+    <button type="button" id="tombolWarna">Ubah Warna</button>
+    <br><br>
+    <div class="kotak merah"></div>
+    <input type="range" name="sMerah" min="35" max="150">
+
+    <div class="kotak hijau"></div>
+    <input type="range" name="sHijau" min="35" max="150">
+
+    <div class="kotak biru"></div>
+    <input type="range" name="sBiru" min="35" max="150">
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <!--CSS-->
+    <style>
+        * {
+            border: 2px solid #dedede;
+            padding: 15px;
+            margin: 15px;
+        }
+
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            max-width: 600px;
+            margin: 30px auto;
+            font-family: sans-serif;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        DOM Events (kejadian)
+        events pada javascript merepresentasikan sebuah kejadian yang terjadi di dalam DOM 
+        kejadian tersebut bisa dilakukan oleh user (Mouse event , keyboard event dll)
+
+        cara menerapkan event nya adalah : (akan mendengarkan apakah ada kegiatan yang dilakukan oleh user/tidak)
+        1. cara 'mendengarkan' event
+        -Event Handler
+            -Inline HTML Attribute (tidak disarankan untuk dilakukan)
+            -Element Method
+        -AddEventListener(nama event nya, aksi nya)
+
+        perbedaan event handler dengan AddEventListener (event handler adalah cara lama)
+        ketika kita memberikan lebih dari satu perubahan pada event 
+        -jika kita menggunakan event handler maka perubahan yang terakhir akan menimpa perubahan sebelumnya 
+        -sedangkan AddEventListener dia akan menambah perubahan nya
+
+        cara menjalankan event Handler
+        -on<event> -> (ketika user menekan tombol pada mouse event nya adalah onclick)
+
+        daftar DOM Event :
+        -Mouse Event    -> ketika mouse nya diklik/doubleklik , digerakan , di scroll
+        -Keyboard Event -> ketika keyboard nya ditekan , dilepas 
+        -Resources Event-> ketika halaman nya di load 
+        -Focus Event    -> ketika misal text inputan di klik maka akan focus
+        -View Event
+        -Form Event
+        -CSS Animation & Transition Event
+        -Drag & Drop Event
+    -->
+    <h1>DOM Events</h1>
+    <h1 id="judul">Hello World</h1>
+    <div id="container">
+
+        <section id="a">
+            <p class="p1">Paragraf 1</p>
+            <a href="http://instagram.com/sandhikagalih">instagram sandhika galih</a>
+            <p class="p2">Paragraf 2</p>
+            <p class="p3" onclick="ubahBGp3()">Paragraf 3</p> <!-- membuat event onclick inline HTML-->
+        </section>
+
+        <section id="b">
+            <p>Paragraf 4</p>
+            <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+            </ul>
+        </section>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

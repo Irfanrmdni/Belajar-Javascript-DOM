@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Traversal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--
+        DOM Traversal (Penulusuran DOM)
+        jadi kita dapat menggunakan penulusuran DOM untuk mendapatkan sebuah elemen berdasarkan elemen yang sudah kita seleksi sebelumnya
+
+        DOM Traversal Method
+        1. parentNode               hasil -> node
+        2. parentElement            hasil -> element
+        3. nextSibling              hasil -> node
+        4. nextElementSibling       hasil -> element
+        5. previousSibling          hasil -> node
+        6. previousElementSibling   hasil -> element
+    -->
+
+    <div class="container">
+        <div class="card">
+            <img src="img/orang3.png">
+            <!--nextSibling ini akan mengambil baris baru / enter kecuali kalau elemen selanjutnya (nama dibuat tanpa enter-->
+            <!-- <span class="nama">Sandhika Galih</span><span class="telp">08123456789</span> -->
+            <span class="nama">Sandhika Galih</span>
+            <span class="telp">08123456789</span>
+            <span class="close">×</span>
+        </div>
+        <div class="card">
+            <img src="img/orang4.png">
+            <span class="nama">Nabila Putri</span>
+            <span class="telp">08123456789</span>
+            <span class="close">×</span>
+        </div>
+        <div class="card">
+            <img src="img/orang5.png">
+            <span class="nama">Jihan Syafitri</span>
+            <span class="telp">08123456789</span>
+            <span class="close">×</span>
+        </div>
+        <div class="card">
+            <img src="img/orang6.png">
+            <span class="nama">Acok Rahman</span>
+            <span class="telp">08123456789</span>
+            <span class="close">×</span>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

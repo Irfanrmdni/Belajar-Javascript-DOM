@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>DOM Manipulation 1</title>
+   <!--CSS-->
+   <style>
+      * {
+         border: 2px solid #dedede;
+         padding: 15px;
+         margin: 15px;
+      }
+
+      html {
+         margin: 0;
+         padding: 0;
+      }
+
+      body {
+         max-width: 600px;
+         margin: 30px auto;
+         font-family: sans-serif;
+         color: #333;
+      }
+   </style>
+</head>
+
+<body>
+   <h1>DOM Manipulation 1</h1>
+   <h1 id="judul">Hello World</h1>
+   <div id="container">
+
+      <section id="a">
+         <p class="p1">Paragraf 1</p>
+         <a href="http://instagram.com/sandhikagalih">instagram sandhika galih</a>
+         <p class="p2">Paragraf 2</p>
+         <p class="p3">Paragraf 3</p>
+      </section>
+
+      <section id="b">
+         <p>Paragraf 4</p>
+         <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+         </ul>
+      </section>
+   </div>
+   <!--
+   DOM Manipulation 1
+   attribute adalah sesuatu yang menempel pada elemen -> contoh : attribte id / class di elemen/tag
+
+   1. DOM Manipulation Method
+   -  Manipulasi Element   -> 
+   contoh method :
+   1. element.innerHTML        -> untuk mengubah isi tag elemen yang diseleksi (misal:text) , bisa juga mengisi tag/elemen HTML lagi
+   2. element.style.<properti> -> untuk menambahkan properti CSS 
+   3. element.setAttribute()   -> untuk memanipulasi attribute (Menambahkan attribute di elemen/tag HTML)
+
+      ini hati-hati karena ketika elemen / tag html sudah punya id/class maka id/class sebelumnya akan ditimpa/dihilangkan
+      cara mengatasinya dengan menggunakan:
+   -  element.classList() 
+      jenis jenis nya:
+      1.element.classList.add()       -> untuk menambahkan class
+      2.element.classList.remove()    -> untuk menghilangkan class
+      3.element.classList.toggle()    -> dengan menggunakan toggle kalau misal elemen tidak mempunyai class tertentu maka dia akan menambahkan
+                                       kalau misal sudah punya elemen/class toggle akan menghilangkan class tersebut
+      4.element.classList.item()      -> untuk mengetahui class tertentu (misal punya class 3 dan akan menampilkan class yang ke 2 maka item(2))
+      5.element.classList.contains()  -> untuk mengetahui punya gak class tertentu di dalam elemen/tag tersebut
+      6.element.classList.replace()   -> untuk mengganti class yang ada dengan class yang baru
+   
+   -  element.getAttribute()       -> untuk memanipulasi attribute (Mengetahui isi attribute dari elemen/tag HTML)
+   -  element.removeAttribute()    -> untuk memanipulasi attribute (Menghilangkan isi attribute dari elemen/tag HTML)
+
+   -  Manipulasi Node              -> misalnya ketika ingin menambahkan/menyisipkan elemen baru pada halaman dan menghapus
+-->
+
+   <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event Bubbling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 
+        DOM Event Bubbling (gelembung air)
+        secara default ketika kita memberikan event ke sebuah elemen , maka berlaku untuk elemen-elemen pembungkus nya juga
+        dan akan berlaku untuk elemen pembungkus nya lagi (container , body , head , html)
+
+        jadi Event Bubbling itu setiap kita punya event di parent dan child nya , maka ketika menjalankan event di child nya
+        maka otomatis yang parent nya juga akan dijalankan 
+
+        nah bagaimana cara mengatur agar event nya berhenti di container atau kita buat event terakhir nya di container 
+    -->
+
+    <div class="container">
+        <div class="card">
+            <img src="img/orang3.png">
+            <!--nextSibling ini akan mengambil baris baru / enter kecuali kalau elemen selanjutnya (nama dibuat tanpa enter-->
+            <!-- <span class="nama">Sandhika Galih</span><span class="telp">08123456789</span> -->
+            <span class="nama">Sandhika Galih</span>
+            <span class="telp">08123456789</span>
+            <span href="" class="close">×</span>
+        </div>
+        <div class="card">
+            <img src="img/orang4.png">
+            <span class="nama">Nabila Putri</span>
+            <span class="telp">08123456789</span>
+            <!-- <a href="" class="close">×</a> -->
+            <span href="" class="close">×</span>
+        </div>
+        <div class="card">
+            <img src="img/orang5.png">
+            <span class="nama">Jihan Syafitri</span>
+            <span class="telp">08123456789</span>
+            <!-- <a href="" class="close">×</a> -->
+            <span href="" class="close">×</span>
+        </div>
+        <div class="card">
+            <img src="img/orang6.png">
+            <span class="nama">Acok Rahman</span>
+            <span class="telp">08123456789</span>
+            <!-- <a href="" class="close">×</a> -->
+            <span href="" class="close">×</span>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

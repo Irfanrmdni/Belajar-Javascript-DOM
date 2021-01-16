@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Pendahuluan</title>
+</head>
+
+<body>
+    <h1>DOM Pendahuluan</h1>
+    <img src="representasi DOM.png" style="width: 50%;">
+    <p>Yang gambar kotak itu disebut node/simpul</p>
+    <img src="DOM-simpul.png" style="width: 50%;">
+    <p>simpul HTML berada di bawah simpul document</p>
+    <img src="contoh.png" style="width: 50%;">
+    <p>Contoh membuat elemen tag p yang didalamnya ada tag a</p>
+    <img src="window.png" style="width: 50%;">
+    <p>Window</p>
+    <img src="object window.png" style="width: 50%;">
+    <p>Object window</p>
+    <!--
+        DOM Pendahuluan
+        DOM (Document Object Model) -> untuk berinteraksi dengan halaman web/HTML agar lebih interaktif
+
+        Definisi:
+        DOM adalah antarmuka pemrograman untuk HTML yang mempresentasikan halaman web, sehingga proram dapat mengubah
+        dan memanipulasi struktur nya
+
+        Document itu adalah halaman isi dari web nya (background putih)
+        Object itu adalah tipe data yang ada di javascript -> mempunyai properti , method
+        Model itu adalah representasi terhadap sesuatu
+
+        Menurut pak sandhika galih DOM -> Representasi elemen HTML pada dokumen menjadi sebuah object
+        Misalnya kita membuat elemen HTML h3, h2, p -> nah itu akan di Representasi kan/disimpan menjadi model object
+
+        Nah model si DOM ini itu tersimpan sebagai pohon hirarki DOM (DOM Tree)
+
+        elemen HTML berada di simpul / node bawah Document -> object nya hanay berisi halaman web nya saja
+        sedangkan document berada di simpul / node bawah window -> object nya lebih besar lagi
+
+        DOM
+        - Antarmuka pemrograman berbasis objek yang merepresentasikan dokumen web
+        - DOM membuat seluruh komponen dari halaman WEB dapat diakses dan dimanipulasi
+        Komponen nya :
+        1.Elemen HTML
+        2.Atribut
+        3.Text
+        -DOM dapat dimanipulasi (Dibuat , Diubah , Dihapus) menggunakan javascript
+
+        Materi DOM
+        1. DOM Selection (Menyeleksi/Mengakses) -> bagaimana kita memilih sebuah elemen yang ada dalam dokumen menggunakan javascript
+        2. DOM Manipulation (Manipulasi)        -> memanipulasi elemen HTML menggunakan DOM
+        3. DOM Traversal                        -> menulusuri elemen HTML lewat elemen HTML yang lain
+        4. Event Handling                       -> melakukan perubahan pada DOM , menulusuri DOM karena ada trigger 
+        5. Studi kasus
+    -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>

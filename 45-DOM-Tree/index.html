@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM tree</title>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+    <p>Paragraf 1</p>
+    <p>Paragraf 2</p>
+
+    <div>
+        <p>Paragraf 3</p>
+    </div>
+
+    <a href="halaman2.html">ke halaman 2</a>
+    <!--
+        DOM tree
+
+
+        yang ada di dalam elemen disebut text
+        tiap tiap node/simpul memiliki tipe 
+        node pada DOM Tree tipenya :
+        1. element <html> , element <head> , element <body> , element <title> , element <h1> <p> <div> <a>
+        2. atribute
+        3. text
+
+        tipe node lengkap :
+        1.elemen
+        2.atribute
+        3.text
+        4.CData section
+        5.entity reference
+        6.entity
+        7.processing intruction
+        8.comment
+        9.document
+        10.document type
+        11.document fragment
+        12.notation
+        
+        istilah yang harus dipahami/penting
+        1.node 
+        adalah ketika memilih satu simpul/node manapun maka disebut node (tergantung jenis node yang dipilih)
+        2.DOM/Node List
+        adalah ketika memilih lebih dari satu node disebut dengan node list (tidak peduli tipe node nya apa)
+        3.HTML Collection
+        adalah kumpulan node tapi khusus yang tipenya elemen HTML saja
+
+        Node list dan HTML Collection :
+        - Merupakan kumpulan node
+        - Struktur data nya mirip dengan array
+        - Node list berisi node apapun tipe nya sedangkan HTML Collection harus berisi elemen HTML
+        - HTML Coolection bersifat live sedangkan Node list bersifat tidak
+
+        Struktur hierarki DOM tree
+
+
+        Struktur hierarki DOM
+        - Root Node                     -> node yang menjadi sumber dari semua node lain di dalam DOM (secara default document)
+        - Parent Node (node orangtua)   -> node yang berada 1 tingkat diatas node lain
+        body adalah parent dari h1, p, a dan div 
+        - Child Node                    -> node yang berada 1 tingkat dibawah node lain
+        h1, p ,a dan div adalah child dari body
+        - Siblings                      -> Child Node yang memiliki parent yang sama
+        - Desenden                      -> yang memiliki anak cucu dan seterusnya
+        - Children                      -> Child node yang bertipe elemen HTML
+
+
+
+        -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
