@@ -1,4 +1,4 @@
-// latihan 1 merubah warna background body dengan klik tombol button
+/* // latihan 1 merubah warna background body dengan klik tombol button
 //tangkap h1
 // const h1 = document.getElementsByTagName('h1')[0];
 // tangakp elemen button nya
@@ -43,7 +43,7 @@ const sBiru = document.querySelector('input[name=sBiru');
 
 // buat method event nya
 sMerah.addEventListener('input', function () {
-    // buat variabel untuk nampung value sMerah 
+    // buat variabel untuk nampung value sMerah
     const red = sMerah.value;
     const green = sHijau.value;
     const blue = sBiru.value;
@@ -51,7 +51,7 @@ sMerah.addEventListener('input', function () {
     document.body.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
 });
 sHijau.addEventListener('input', function () {
-    // buat variabel untuk nampung value sMerah 
+    // buat variabel untuk nampung value sMerah
     const red = sMerah.value;
     const green = sHijau.value;
     const blue = sBiru.value;
@@ -59,7 +59,7 @@ sHijau.addEventListener('input', function () {
     document.body.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
 });
 sBiru.addEventListener('input', function () {
-    // buat variabel untuk nampung value sMerah 
+    // buat variabel untuk nampung value sMerah
     const red = sMerah.value;
     const green = sHijau.value;
     const blue = sBiru.value;
@@ -79,7 +79,7 @@ document.body.addEventListener('mousemove', function (event) {
     // console.log(window.innerWidth);
 
     //5. mengatur agar warna nya dari 0-255 setiap mouse digerakan baik secara sumbu X / Y
-    //6. caranya dengan membagi posisi mouse dengan ukuran width object window(document yang putih) 
+    //6. caranya dengan membagi posisi mouse dengan ukuran width object window(document yang putih)
     const xPos = Math.round((event.clientX / window.innerWidth) * 255); // agar hasilnya bilangan bulat (math.round)
     const yPos = Math.round((event.clientY / window.innerHeight) * 255); // agar hasilnya bilangan bulat (math.round)
 
@@ -87,6 +87,66 @@ document.body.addEventListener('mousemove', function (event) {
     document.body.style.backgroundColor = 'rgb(' + xPos + ',' + yPos + ', 100)';
 
     //8. ketika content nya kosong maka dari ukuran height nya maka otomatis event nya tidak akan jalan
-    //9. maka kita gunakan di css ukuran html dan body nya 100% 
+    //9. maka kita gunakan di css ukuran html dan body nya 100%
 
+}); */
+
+// =================================================================================
+// 1. change background color
+const btnColor = document.getElementById('tombolWarna');
+// const body = document.getElementsByTagName('body')[0];  = document.body
+btnColor.addEventListener('click', function () {
+    // document.body.style.backgroundColor = 'rebeccapurple';
+    document.body.classList.toggle('change');
+});
+
+// 2. change random background color
+const btnRandom = document.createElement('button');
+const btnText = document.createTextNode('Random color');
+btnRandom.appendChild(btnText);
+btnRandom.setAttribute('type', 'button');
+
+btnColor.after(btnRandom);
+
+btnRandom.addEventListener('click', function () {
+    const red = Math.floor(Math.random() * 255 + 1);
+    const green = Math.floor(Math.random() * 255 + 1);
+    const blue = Math.floor(Math.random() * 255 + 1);
+    document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+});
+
+// 3. slider color
+const sRed = document.querySelector('input[name=sMerah]');
+const sGreen = document.querySelector('input[name=sHijau]');
+const sBlue = document.querySelector('input[name=sBiru]');
+
+sRed.addEventListener('input', function () {
+    const red = sRed.value;
+    const green = sGreen.value;
+    const blue = sBlue.value;
+    document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+});
+
+sGreen.addEventListener('input', function () {
+    const red = sRed.value;
+    const green = sGreen.value;
+    const blue = sBlue.value;
+    document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+});
+
+sBlue.addEventListener('input', function () {
+    const red = sRed.value;
+    const green = sGreen.value;
+    const blue = sBlue.value;
+    document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+});
+
+// 4. cursor mouse color
+document.body.addEventListener('mousemove', function (e) {
+    // posisi mouse (clientX,clientY)
+    // ukuran browser (innerWidth,innerHeight)
+    const xPos = Math.floor((e.clientX / window.innerWidth) * 255);
+    const yPos = Math.floor((e.clientY / window.innerHeight) * 255);
+
+    document.body.style.backgroundColor = `rgb(${xPos},${yPos},155)`;
 });

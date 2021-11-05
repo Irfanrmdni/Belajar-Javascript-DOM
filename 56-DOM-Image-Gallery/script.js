@@ -1,7 +1,7 @@
 //membuat gambar thumb agar bisa di klik dan muncul full size nya
 
 // tangkap class container nya
-const container = document.querySelector('.container');
+/* const container = document.querySelector('.container');
 
 // tangkap class jumbo nya
 const jumbo = document.querySelector('.jumbo');
@@ -40,4 +40,31 @@ container.addEventListener('click', function (e) {
     }
 
 });
+ */
 
+// ========================================================================================================
+const jumbo = document.querySelector('.jumbo');
+const container = document.querySelector('.container');
+const thumbs = document.querySelectorAll('.thumb');
+
+container.addEventListener('click', function (e) {
+    if (e.target.className == 'thumb') {
+        jumbo.src = e.target.src;
+        jumbo.classList.add('fade');
+
+        thumbs.forEach(function (thumb) {
+            // if (thumb.classList.contains('active')) {
+            //     thumb.classList.remove('active');
+            // }
+            thumb.className = 'thumb';
+        });
+
+        e.target.classList.add('active');
+
+        setTimeout(function () {
+            jumbo.classList.remove('fade');
+        }, 500);
+
+        e.preventDefault();
+    }
+});

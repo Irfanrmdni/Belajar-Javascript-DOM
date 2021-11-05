@@ -7,8 +7,8 @@ const h5 = document.getElementById('card-title');
 function runEvent(e) {
     console.log('Tipe Event : ' + e.type);
 
-    h5.textContent = `MouseX : ${e.offsetX} MouseY : ${e.offsetY}`;
-    document.body.style.backgroundColor = `rgb(${e.offsetY},${e.offsetX},255)`;
+    // h5.textContent = `MouseX : ${e.offsetX} MouseY : ${e.offsetY}`;
+    // document.body.style.backgroundColor = `rgb(${e.offsetY},${e.offsetX},255)`;
 }
 
 // Event Click
@@ -36,4 +36,4 @@ function runEvent(e) {
 // card.addEventListener('mouseout', runEvent);
 
 // Event Mouse move
-card.addEventListener('mousemove', runEvent);
+// card.addEventListener('mousemove', runEvent);

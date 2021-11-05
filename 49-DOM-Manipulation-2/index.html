@@ -28,26 +28,6 @@
 </head>
 
 <body>
-   <h1>DOM Manipulation 2</h1>
-   <h1 id="judul">Hello World</h1>
-   <div id="container">
-
-      <section id="a">
-         <p class="p1">Paragraf 1</p>
-         <a href="http://instagram.com/sandhikagalih">instagram sandhika galih</a>
-         <p class="p2">Paragraf 2</p>
-         <p class="p3">Paragraf 3</p>
-      </section>
-
-      <section id="b">
-         <p>Paragraf 4</p>
-         <ul>
-            <li>item 1</li>
-            <li>item 2</li>
-            <li>item 3</li>
-         </ul>
-      </section>
-   </div>
    <!--
    DOM Manipulation 1
    attribute adalah sesuatu yang menempel pada elemen -> contoh : attribte id / class di elemen/tag
@@ -78,10 +58,10 @@
       Method nya :
       -document.createElement()    -> untuk membuat elemen tag HTML baru di javascript
       -document.createTextNode()   -> untuk membuat isi elemen tag HTML baru di javascript
-      -node.appendChild()          -> untuk menyimpan ke akhir dari elemen tersebut (elemen parent)
+      -node.appendChild()          -> untuk menyimpan ke akhir dari elemen parent
       -node.insertBefore()         -> memasukan elemen sebelum elemen setelahnya/sesudahnya
-      -parentNode.removeChild()    -> menghapus elemen child
-      -parentNode.replaceChild()   -> mengganti elemen baru
+      -parentNode.removeChild()    -> menghapus elemen child dari parent nya
+      -parentNode.replaceChild()   -> mengganti elemen child dengan elemen baru dari parent nya
 
       Method baru :
       -parentNode.append()
@@ -91,7 +71,26 @@
       -childNode.remove()
       -childNode.replaceWith()
 -->
+   <h1>DOM Manipulation 2</h1>
+   <h1 id="judul">Hello World</h1>
+   <div id="container">
 
+      <section id="a">
+         <p class="p1">Paragraf 1</p>
+         <a href="http://instagram.com/sandhikagalih">instagram sandhika galih</a>
+         <p class="p2">Paragraf 2</p>
+         <p class="p3">Paragraf 3</p>
+      </section>
+
+      <section id="b">
+         <p>Paragraf 4</p>
+         <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+         </ul>
+      </section>
+   </div>
    <script src="script.js"></script>
 </body>
 

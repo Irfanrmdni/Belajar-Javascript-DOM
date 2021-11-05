@@ -6,7 +6,7 @@
 
 body {
     background-color: #ccc;
-    font-family: poppins;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
@@ -17,6 +17,15 @@ body {
     margin: 30px auto;
     box-shadow: 0 6px 9px rgba(0, 0, 0, 0.4);
     overflow: auto;
+}
+
+.container h1 {
+    color: rgb(255, 255, 255);
+    width: 595px;
+    margin: 20px auto;
+    background-color: rgb(78, 78, 78);
+    font-size: 28px;
+    padding: 10px 0;
 }
 
 .container img {
@@ -43,13 +52,6 @@ img.jumbo {
     cursor: pointer;
 }
 
-.container h1 {
-    color: rgb(255, 255, 255);
-    width: 595px;
-    margin: 20px auto;
-    background-color: rgb(78, 78, 78);
-}
-
 /* animasi */
 @keyframes fadeIn {
     to {
@@ -58,8 +60,8 @@ img.jumbo {
 }
 
 .fade {
+    animation: fadeIn 0.5s ease-in-out forwards;
     opacity: 0;
-    animation: fadeIn 0.3s ease-in-out forwards;
 }
 
 .active {

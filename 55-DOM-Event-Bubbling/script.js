@@ -30,13 +30,36 @@
 // // nah kita mau hanya menjalankan event si child nya aja .. bagaimana ? nah kita gunakan stopPropagation()
 
 // berikut cara agar event nya berhenti di container atau kita buat event terakhir nya di container (cara paling efektif daripada yang diatas)
-const container = document.querySelector('.container');
+/* const container = document.querySelector('.container');
 
 container.addEventListener('click', function (e) {
-    // console.log(e.target); -> nah ini akan ketika mouse di klik maka akan mentarget elemen yang ada di dalam containe 
+    // console.log(e.target); -> nah ini akan ketika mouse di klik maka akan mentarget elemen yang ada di dalam containe
     if (e.target.className == 'close') { // jika elemen yang di target itu punya nama class 'close'
         e.target.parentElement.style.display = 'none'; // maka e.target (close nya) parent nya (card) akan di kasih style display none
     }
+}); */
+
+// ==================================================================================================================================================
+// const close = document.querySelectorAll('.close');
+// close.forEach(function (el) {
+//     el.addEventListener('click', function (e) {
+//         e.target.parentElement.style.visibility = 'hidden';
+//         e.preventDefault();
+//         e.stopPropagation();
+//     });
+// });
+
+// const cards = document.querySelectorAll('.card');
+// cards.forEach(function (el) {
+//     el.addEventListener('click', function (e) {
+//         alert('ok');
+//     });
+// });
+
+const container = document.querySelector('.container');
+container.addEventListener('click', function (e) {
+    if (e.target.className == 'close') {
+        e.target.parentElement.style.visibility = 'hidden';
+        e.preventDefault();
+    }
 });
-
-

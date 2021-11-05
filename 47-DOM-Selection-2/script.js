@@ -10,10 +10,10 @@
 
 // memanggil elemen p di dalam id b
 // membuat variabel untuk menampung elemen p
-const p4 = document.querySelector('#b p');
+// const p4 = document.querySelector('#b p');
 // mengubah warna elemen
-p4.style.color = 'green';
-p4.style.fontSize = '25px';
+// p4.style.color = 'green';
+// p4.style.fontSize = '25px';
 
 // memanggil elemen li di dalam id b
 // membuat variabel untuk menampung li
@@ -40,10 +40,30 @@ p4.style.fontSize = '25px';
 // p5.style.backgroundColor = 'cyan';
 
 // cara lain dengan mengganti getElemenById dengan querySelector
-const section2 = document.querySelector('#b'); // ciri dari querySelector dia memakai tanda # karena id
+// const section2 = document.querySelector('#b'); // ciri dari querySelector dia memakai tanda # karena id
 // mengubah elemen li di dalam id b
-const li2 = section2.getElementsByTagName('li');
-for (let i = 0; i < li2.length; i++) {
-    li2[i].style.backgroundColor = 'salmon';
-}
+// const li2 = section2.getElementsByTagName('li');
+// for (let i = 0; i < li2.length; i++) {
+//     li2[i].style.backgroundColor = 'salmon';
+// }
 
+// ===========================================================================================================================================================
+
+// 1. querySelector
+// const paragraf4 = document.querySelector('#b p');
+// paragraf4.style.color = 'red';
+// paragraf4.style.fontSize = '24px';
+
+// const li2 = document.querySelector('#b ul li:nth-child(2)');
+// li2.style.backgroundColor = 'lightblue';
+
+// 2. querySelectorAll
+// const paragraf = document.querySelectorAll('p');
+// for (let i = 0; i < paragraf.length; i++) {
+//     paragraf[i].style.backgroundColor = 'orange';
+// }
+
+// 2. mengubah node root
+const sectionB = document.getElementById('b');
+const p4 = sectionB.getElementsByTagName('p')[0];
+p4.style.backgroundColor = 'salmon';

@@ -14,7 +14,7 @@
 
 // cara 02 (dengan DOM Traversal) - mengatur agar tombol close di klik maka akan hilang
 // menangkap elmen card dan close
-const close = document.querySelectorAll('.close');
+// const close = document.querySelectorAll('.close');
 // memanggil semua close dengan looping
 // for (let i = 0; i < close.length; i++) {
 //     close[i].addEventListener('click', function (e) {
@@ -27,12 +27,12 @@ const close = document.querySelectorAll('.close');
 // }
 
 // cara 03 (dengan DOM Traversal dan forEach pengganti looping) - mengatur agar tombol close di klik maka akan hilang
-close.forEach(function (elemen) {
+/* close.forEach(function (elemen) {
     elemen.addEventListener('click', function (e) {
         e.target.parentElement.style.display = 'none';
         e.preventDefault(); // contoh menggunakan prevent default (ini akan menghentikan aksi default dari tag a hyperlink nya)
     });
-});
+}); */
 
 
 
@@ -51,3 +51,14 @@ close.forEach(function (elemen) {
 
 // // contoh DOM Traversal Method prevElementSibling
 // console.log(nama.previousElementSibling); // ini sama seperti nextElementSibling namun akan mengambil elemen sebelumnya (img)
+
+// ========================================================================================================================================================
+
+const close = document.querySelectorAll('.close');
+
+close.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+        e.target.parentElement.style.visibility = 'hidden';
+        e.preventDefault();
+    });
+});

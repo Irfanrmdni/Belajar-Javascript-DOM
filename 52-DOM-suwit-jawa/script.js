@@ -1,25 +1,25 @@
 // buat function untuk menentukan pilihan computer
-function getPilihComputer() {
-    const comp = Math.random();
-    if (comp <= 0.34) return 'gajah';
-    if (comp >= 0.34 && comp < 0.67) return 'orang';
-    return 'semut';
-}
+// function getPilihComputer() {
+//     const comp = Math.random();
+//     if (comp <= 0.34) return 'gajah';
+//     if (comp >= 0.34 && comp < 0.67) return 'orang';
+//     return 'semut';
+// }
 
 // buat function untuk menentukan rules
-function getHasil(computer, player) {
-    if (player == computer) return 'SERI!';
-    if (player == 'gajah') return (computer == 'semut') ? 'KALAH!' : 'MENANG!';
-    if (player == 'semut') return (computer == 'gajah') ? 'MENANG!' : 'KALAH!';
-    if (player == 'orang') return (computer == 'semut') ? 'MENANG!' : 'KALAH!';
-    if (player == 'gajah') return (computer == 'orang') ? 'MENANG!' : 'KALAH!';
-}
+// function getHasil(computer, player) {
+//     if (player == computer) return 'SERI!';
+//     if (player == 'gajah') return (computer == 'semut') ? 'KALAH!' : 'MENANG!';
+//     if (player == 'semut') return (computer == 'gajah') ? 'MENANG!' : 'KALAH!';
+//     if (player == 'orang') return (computer == 'semut') ? 'MENANG!' : 'KALAH!';
+//     if (player == 'gajah') return (computer == 'orang') ? 'MENANG!' : 'KALAH!';
+// }
 
 // membuat gambar nya berputar random
-function putar() {
+/* function putar() {
     // tankap gambar komputer yang ada di attribute area komputer
     const imgComputer = document.querySelector('.img-komputer');
-    // membuat array gambar untuk menampung 
+    // membuat array gambar untuk menampung
     const gambar = ['gajah', 'orang', 'semut'];
     // membuat variabel i untuk setiap kali gambar akan bertambah 1 / berganti
     let i = 0;
@@ -27,7 +27,7 @@ function putar() {
     const waktuMulai = new Date().getTime();
     // setInterval adalah fungsi untuk melakukan sesuatu secara berulang-ulang (selama waktu tertentu)
     setInterval(function () {
-        // membuat agar waktu mulai nya berhenti setelah 1 detik / waktunya selisih 1 detik 
+        // membuat agar waktu mulai nya berhenti setelah 1 detik / waktunya selisih 1 detik
         if (new Date().getTime() - waktuMulai > 1000) {
             clearInterval;
             return;
@@ -41,10 +41,11 @@ function putar() {
         }
 
     }, 100); // -> mengatur interval nya setiap 0.1 detik
-}
+} */
+
 // cara 02
 
-const pilihan = document.querySelectorAll('li img');
+/* const pilihan = document.querySelectorAll('li img');
 pilihan.forEach(function (pil) {
     pil.addEventListener('click', function () {
         // membuat pilihan computer
@@ -67,69 +68,170 @@ pilihan.forEach(function (pil) {
             info.innerHTML = hasil;
         }, 1000);
     });
-});
+}); */
 
 // cara 01
 
-// // mengatur (tombol) player gajah
-// // tankap attribute class gajah
+// mengatur (tombol) player gajah
+// tankap attribute class gajah
 // const pGajah = document.querySelector('.gajah');
-// // membuat event player gajah
+// membuat event player gajah
 // pGajah.addEventListener('click', function () {
-//     // membuat pilihan computer
+// membuat pilihan computer
 //     const pilihComputer = getPilihComputer();
-//     // membuat pilihan player
+// membuat pilihan player
 //     const pilihPlayer = pGajah.className;
-//     // membuat hasil player vs computer
+// membuat hasil player vs computer
 //     const hasil = getHasil(pilihComputer, pilihPlayer);
-//     // menangkap gambar di elemen area komputer
+// menangkap gambar di elemen area komputer
 //     const imgComputer = document.querySelector('.img-komputer');
-//     // menampilkan gambar pilihan computer
+// menampilkan gambar pilihan computer
 //     imgComputer.setAttribute('src', 'img/' + pilihComputer + '.png');
-//     // mengangkap elemen div attribute info
+// mengangkap elemen div attribute info
 //     const info = document.querySelector('.info');
-//     // mengganti/menyisipkan isi/text elemen div attribute info
+// mengganti/menyisipkan isi/text elemen div attribute info
 //     info.innerHTML = hasil;
 // });
 
-// // mengatur (tombol) player orang
-// // tangkap attribute class orang
+// mengatur (tombol) player orang
+// tangkap attribute class orang
 // const pOrang = document.querySelector('.orang');
-// // membuat event player orang
+// membuat event player orang
 // pOrang.addEventListener('click', function () {
-//     // membuat pilihan computer
+// membuat pilihan computer
 //     const pilihComputer = getPilihComputer();
-//     // membuat pilihan player
+// membuat pilihan player
 //     const pilihPlayer = pOrang.className;
-//     // membuat hasil player vs computer
+// membuat hasil player vs computer
 //     const hasil = getHasil(pilihComputer, pilihPlayer);
-//     // menangkap gambar pilihan computer
+// menangkap gambar pilihan computer
 //     const imgComputer = document.querySelector('.img-komputer');
-//     // menampilkan gambar pilihan computer
+// menampilkan gambar pilihan computer
 //     imgComputer.setAttribute('src', 'img/' + pilihComputer + '.png');
-//     // menangkap elemen div class info
+// menangkap elemen div class info
 //     const info = document.querySelector('.info')
-//     // mengganti / menyisipkan isi/text elemen div attribute info
+// mengganti / menyisipkan isi/text elemen div attribute info
 //     info.innerHTML = hasil;
 // });
 
-// // mengatur (tombol) player semut
-// // tangkap attribute class semut
+// mengatur (tombol) player semut
+// tangkap attribute class semut
 // const pSemut = document.querySelector('.semut');
-// // membuat event player orang
+// membuat event player orang
 // pSemut.addEventListener('click', function () {
-//     // membuat pilihan computer
+// membuat pilihan computer
 //     const pilihComputer = getPilihComputer();
-//     // membuat pilihan player
+// membuat pilihan player
 //     const pilihPlayer = pSemut.className;
-//     // membuat hasil player vs computer
+// membuat hasil player vs computer
 //     const hasil = getHasil(pilihComputer, pilihPlayer);
-//     // menangkap gambar pilihan computer
+// menangkap gambar pilihan computer
 //     const imgComputer = document.querySelector('.img-komputer');
-//     // menampilkan gambar pilihan computer
+// menampilkan gambar pilihan computer
 //     imgComputer.setAttribute('src', 'img/' + pilihComputer + '.png');
-//     // menangkap elemen div class info
+// menangkap elemen div class info
 //     const info = document.querySelector('.info')
-//     // mengganti / menyisipkan isi/text elemen div attribute info
+// mengganti / menyisipkan isi/text elemen div attribute info
 //     info.innerHTML = hasil;
 // });
+
+// ======================================================================================================
+
+// 1. tankap pilihan computer
+function getComputer() {
+    const computer = Math.random();
+
+    if (computer < 0.34) return 'gajah';
+    if (computer >= 0.34 && computer < 0.67) return 'orang';
+    return 'semut';
+}
+
+// 2. menentukan rules game
+function getHasil(computer, player) {
+    if (player == computer) return 'SERI!';;
+    if (player == 'gajah') return (computer == 'orang') ? 'MENANG!' : 'KALAH!';
+    if (player == 'orang') return (computer == 'gajah') ? 'KALAH!' : 'MENANG!';
+    if (player == 'semut') return (computer == 'orang') ? 'KALAH!' : 'MENANG!';
+}
+
+// cara efektif
+const pilihanPlayer = document.querySelectorAll('.area-player img');
+pilihanPlayer.forEach(function (pil) {
+    pil.addEventListener('click', function () {
+        const pilihanComputer = getComputer();
+        const pilihanPlayer = pil.className;
+        const hasil = getHasil(pilihanComputer, pilihanPlayer);
+        const imgComputer = document.querySelector('.img-komputer');
+        const infoHasil = document.querySelector('.info');
+
+        putar();
+
+        setTimeout(function () {
+            imgComputer.setAttribute('src', `img/${pilihanComputer}.png`);
+            infoHasil.textContent = hasil;
+        }, 1000);
+
+    });
+});
+
+
+// cara kurang efektif
+// 3. tangkap pilihan player
+// gajah
+// const pGajah = document.querySelector('.gajah');
+// pGajah.addEventListener('click', function () {
+//     const pilihanComputer = getComputer();
+//     const pilihanPlayer = pGajah.className;
+//     const hasil = getHasil(pilihanComputer, pilihanPlayer);
+//     const imgComputer = document.querySelector('.img-komputer');
+//     const infoHasil = document.querySelector('.info');
+
+//     imgComputer.setAttribute('src', `img/${pilihanComputer}.png`);
+//     infoHasil.textContent = hasil;
+// });
+
+// orang
+// const pOrang = document.querySelector('.orang');
+// pOrang.addEventListener('click', function () {
+//     const pilihanComputer = getComputer();
+//     const pilihanPlayer = pOrang.className;
+//     const hasil = getHasil(pilihanComputer, pilihanPlayer);
+//     const imgComputer = document.querySelector('.img-komputer');
+//     const infoHasil = document.querySelector('.info');
+
+//     imgComputer.setAttribute('src', `img/${pilihanComputer}.png`);
+//     infoHasil.textContent = hasil;
+// });
+
+// semut
+// const pSemut = document.querySelector('.semut');
+// pSemut.addEventListener('click', function () {
+//     const pilihanComputer = getComputer();
+//     const pilihanPlayer = pSemut.className;
+//     const hasil = getHasil(pilihanComputer, pilihanPlayer);
+//     const imgComputer = document.querySelector('.img-komputer');
+//     const infoHasil = document.querySelector('.info');
+
+//     imgComputer.setAttribute('src', `img/${pilihanComputer}.png`);
+//     infoHasil.textContent = hasil;
+// });
+
+// membuat animasi agar gambar computer berputar acak
+function putar() {
+    const imgComputer = document.querySelector('.img-komputer');
+    const gambar = ['gajah', 'semut', 'orang'];
+    let i = 0;
+    const waktuMulai = new Date().getTime();
+
+    setInterval(function () {
+        if (new Date().getTime() - waktuMulai > 1000) {
+            clearInterval;
+            return;
+        }
+
+        imgComputer.setAttribute('src', 'img/' + gambar[i++] + '.png');
+        if (i == gambar.length) {
+            i = 0;
+        }
+    }, 100);
+}

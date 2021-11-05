@@ -28,29 +28,12 @@
 </head>
 
 <body>
-    <h1 id="judul">Hello World</h1>
-    <div id="container">
-        <section id="a">
-            <p class="p1">Paragraf 1</p>
-            <a href="http://instagram.com/sandhikagalih">instagram sandhika galih</a>
-            <p class="p2">Paragraf 2</p>
-            <p class="p3">Paragraf 3</p>
-        </section>
-
-        <section id="b">
-            <p>Paragraf 4</p>
-            <ul>
-                <li>item 1</li>
-                <li>item 2</li>
-                <li>item 3</li>
-            </ul>
-        </section>
-    </div>
     <!--
         DOM Selection
         adalah tahap awal ketika akan memanipulasi / penulusuran pada DOM 
 
         DOM Selection Method Beberapa fungsi/method yang bisa digunakan :
+
         - getElementByid() -> dalam satu document itu hanya boleh ada satu elemen yang memiliki id tertentu
         contoh <h1 id="judul"> </h1> -> ini hanya boleh satu elemen tidak boleh membuat id yang sama lagi
 
@@ -70,7 +53,31 @@
         querySelectorAll()                          nodeList()
 
         ketika menambahkan style css di javascript itu akan otomatis dibuat inline css
+
+        ketika menggunakan getElementsByClassName() dan querySelectorAll() kita tidak bisa langsung memanipulasi
+        karna selection tersebut mirip dengan array dan memiliki index. jadi kita harus tentukan terlebih dahulu
+        selection index nya
     -->
+
+    <h1 id="judul">Hello World</h1>
+    <div id="container">
+        <section id="a">
+            <p class="p1">Paragraf 1</p>
+            <a href="http://instagram.com/sandhikagalih">instagram sandhika galih</a>
+            <p class="p2">Paragraf 2</p>
+            <p class="p3">Paragraf 3</p>
+        </section>
+
+        <section id="b">
+            <p>Paragraf 4</p>
+            <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+            </ul>
+        </section>
+    </div>
+
 
     <script src="script.js"></script>
 </body>
